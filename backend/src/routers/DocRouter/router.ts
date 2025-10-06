@@ -17,6 +17,7 @@ import getEducation from "../../controller/doctorController/getEducation";
 import postImgProfile from "../../controller/doctorController/postImgProfile";
 import dashboardCount from "../../controller/doctorController/dashboardCount";
 import logoutDoctor from "../../controller/doctorController/logout";
+import getAllDoctor from "../../controller/doctorController/getAllDoc";
 
 const router = express.Router();
 
@@ -49,6 +50,7 @@ router.get("/doctor/education",verifyToken,getEducation)
 router.post("/doctor/profile-image", verifyToken,upload.single("profileImage"),postImgProfile)
 router.get("/doctor/dashboard-counts", verifyToken,dashboardCount)
 router.get("/doctor/logout", verifyToken,logoutDoctor);
+router.get("/doctor/getAllDoctor", verifyToken,getAllDoctor);
 
 
 
