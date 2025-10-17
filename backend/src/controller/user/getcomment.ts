@@ -1,6 +1,5 @@
 import Post from "../../models/Doctor/Post";
 
-
 const getComment = async (req: any, res: any) => {
   const { postId } = req.params;
 

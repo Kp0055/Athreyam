@@ -26,4 +26,3 @@ const postLike = async (req: any, res: any) => {
 };
 
 export default postLike;
-

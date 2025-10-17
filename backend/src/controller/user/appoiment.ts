@@ -10,8 +10,6 @@ const appoiments = async (req: any, res: any) => {
       .populate("patientId")
       .populate("doctorId");
 
-    console.log(data, "User-specific booking data");
-
     if (!data || data.length === 0) {
       return res.status(404).json({ message: "No bookings found for this user" });
     }

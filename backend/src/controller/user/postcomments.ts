@@ -1,7 +1,6 @@
 import Post from "../../models/Doctor/Post";
 import User from "../../models/User/user";
 
-
 const postComments = async (req: any, res: any) => {
   try {
     const { content } = req.body;

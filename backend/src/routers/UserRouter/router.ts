@@ -19,6 +19,9 @@ import postComments from '../../controller/user/postcomments';
 import getComment from '../../controller/user/getcomment';
 import getSavedPosts from '../../controller/user/getSavedpost';
 import followingData from '../../controller/user/follow';
+import getAllDoctor from '../../controller/user/getAllDoc';
+import docProfileById from '../../controller/user/docprofile';
+import { getDoctorPosts } from '../../controller/user/getDocPost';
 
 const router = express.Router();
 
@@ -55,6 +58,9 @@ router.post('/:selectedPostId/comment',authMiddleware,postComments)
 router.get('/:postId/comments',authMiddleware,getComment)
 router.get('/user/saved-posts',authMiddleware,getSavedPosts)
 router.post('/users/follow/:doctorId',authMiddleware,followingData)
+router.get("/user/getAllDoctor", authMiddleware,getAllDoctor);
+router.get("/user/getDoctor/:id", authMiddleware,docProfileById);
+router.get('/user/doctorPosts/:doctorId', authMiddleware,getDoctorPosts);
 
 
 

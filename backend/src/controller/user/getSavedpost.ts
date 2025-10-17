@@ -14,8 +14,7 @@ const getSavedPosts = async (req: any, res: any) => {
       .select("doctorId docName content image createdAt")  // select what you need
       .lean();  // optional: gives plain JS objects
 
-      console.log(savedPosts,' njjn eivde keri ')
-
+  
     return res.status(200).json({ savedPosts });
   } catch (error) {
     console.error("Error fetching saved posts:", error);
